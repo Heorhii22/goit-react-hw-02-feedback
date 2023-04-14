@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export function Feedback({
   onBtnGoodClick,
   onBtnNeutralClick,
@@ -17,3 +19,9 @@ export function Feedback({
     </div>
   );
 }
+
+Feedback.propTypes = {
+  onBtnGoodClick: PropTypes.func.isRequired,
+  onBtnNeutralClick: PropTypes.func.isRequired,
+  onBtnNegativeClick: PropTypes.func.isRequired,
+};

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export function Statistics({
   good,
   bad,
@@ -16,3 +17,8 @@ export function Statistics({
     </>
   );
 }
+
+Statistics.propTypes = {
+  countTotalFeedback: PropTypes.number.isRequired,
+  countPositiveFeedbackPercentage: PropTypes.number.isRequired,
+};
