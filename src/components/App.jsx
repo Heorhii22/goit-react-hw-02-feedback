@@ -45,27 +45,29 @@ export class App extends Component {
   render() {
     return (
       <>
-        <Section title="Please leave feedback">
-          <Feedback
-            onBtnGoodClick={this.onBtnGoodClick}
-            onBtnNeutralClick={this.onBtnNeutralClick}
-            onBtnNegativeClick={this.onBtnNegativeClick}
-          />
-        </Section>
-
-        <Section title="Statistics">
-          {this.state.good || this.state.bad || this.state.neutral ? (
-            <Statistics
-              good={this.state.good}
-              bad={this.state.bad}
-              neutral={this.state.neutral}
-              countTotalFeedback={this.countTotalFeedback()}
-              countPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage()}
+        <div>
+          <Section title="Please leave feedback">
+            <Feedback
+              onBtnGoodClick={this.onBtnGoodClick}
+              onBtnNeutralClick={this.onBtnNeutralClick}
+              onBtnNegativeClick={this.onBtnNegativeClick}
             />
-          ) : (
-            <Notification message="No feedback given" />
-          )}
-        </Section>
+          </Section>
+
+          <Section title="Statistics">
+            {this.state.good || this.state.bad || this.state.neutral ? (
+              <Statistics
+                good={this.state.good}
+                bad={this.state.bad}
+                neutral={this.state.neutral}
+                countTotalFeedback={this.countTotalFeedback()}
+                countPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage()}
+              />
+            ) : (
+              <Notification message="No feedback given" />
+            )}
+          </Section>
+        </div>
       </>
     );
   }

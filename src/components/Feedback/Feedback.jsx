@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from './Feedback.module.css';
 
 export function Feedback({
   onBtnGoodClick,
@@ -6,7 +7,7 @@ export function Feedback({
   onBtnNegativeClick,
 }) {
   return (
-    <div className="button__list">
+    <div className={css.button__list}>
       <button type="button" onClick={onBtnGoodClick}>
         Good
       </button>

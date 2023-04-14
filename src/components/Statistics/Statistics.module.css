@@ -1,0 +1,15 @@
+.statisticItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    height: 30px;
+    text-align: center;
+    background-color: #FFF5EE;
+    margin: 0;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 600;
+}
